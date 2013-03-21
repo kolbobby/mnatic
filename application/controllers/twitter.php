@@ -111,7 +111,7 @@ class Twitter extends CI_Controller
 	public function post()
 	{
 		$message = $_POST['post'];
-		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
+		if(!$message || strlen($message) > 140 || strlen($message) < 1)
 		{
 			// Restrictions error. Notification here.
 			redirect(base_url('/msg_error'));
