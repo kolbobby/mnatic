@@ -30,8 +30,9 @@
 			{
 				// Already logged in via Twitter
 				//redirect('/');
-				$timeline = $this->tweet->call('get', 'statuses/home_timeline');
-				var_dump($timeline);
+				//$timeline = $this->tweet->call('get', 'statuses/home_timeline');
+				//var_dump($timeline);
+				print_r($this->tweet->get_tokens());
 			}
 		}
 		
