@@ -13,6 +13,12 @@ class Twitter extends CI_Controller {
 	}
 	
 	public function post() {
-		echo $this->connection->http_code;
+		$post = array('status' => "$_POST['content']");
+		$result = $this->connection->post('statuses/update', $post);
+		
+		if(!$result->error)
+			echo "Post successful!";
+		else
+			echo "Post failed!";
 	}
 }
