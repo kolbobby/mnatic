@@ -17,7 +17,7 @@ class Twitter extends CI_Controller
 	/**
 	 * Controller constructor
 	 */
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 		$checking = true;
