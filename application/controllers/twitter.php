@@ -9,7 +9,7 @@
 class Twitter extends CI_Controller
 {
 	/**
-	 * TwitterOAuth class instance.
+	 * twitteroauth class instance.
 	 */
 	private $connection;
 	
@@ -25,17 +25,17 @@ class Twitter extends CI_Controller
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{
 			// If user already logged in
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('access_token'),  $this->session->userdata('access_token_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('access_token'),  $this->session->userdata('access_token_secret'));
 		}
 		elseif($this->session->userdata('request_token') && $this->session->userdata('request_token_secret'))
 		{
 			// If user in process of authentication
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('request_token'), $this->session->userdata('request_token_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('request_token'), $this->session->userdata('request_token_secret'));
 		}
 		else
 		{
 			// Unknown user
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'));
 		}
 	}
 	
@@ -108,7 +108,7 @@ class Twitter extends CI_Controller
 		}
 	}
 	
-	public function post($in_reply_to)
+	public function post()
 	{
 		$message = $_POST['content'];
 		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
@@ -140,7 +140,7 @@ class Twitter extends CI_Controller
 					else
 					{
 						// Error, message hasn't been published
-						redirect(base_url('/'));
+						redirect(base_url('/error'));
 					}
 				}
 			}
