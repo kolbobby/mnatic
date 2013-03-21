@@ -42,6 +42,7 @@ $route['default_controller'] = "base";
 $route['404_override'] = '';
 
 $route['post'] = "twitter/post";
+$route['/twitter/auth'] = "twitter/auth";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
