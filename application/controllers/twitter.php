@@ -49,7 +49,7 @@ class Twitter extends CI_Controller
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{
 			// User is already authenticated. Add your user notification code here.
-			redirect(base_url('/auth'));
+			redirect(base_url('/oauth'));
 		}
 		else
 		{
@@ -110,7 +110,7 @@ class Twitter extends CI_Controller
 	
 	public function post()
 	{
-		$message = $_POST['content'];
+		$message = $this->input->post('post');
 		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
 		{
 			// Restrictions error. Notification here.

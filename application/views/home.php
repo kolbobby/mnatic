@@ -1,4 +1,6 @@
 <div>
-	<textarea id="post"></textarea><br />
+	<?php form_open('twitter/post'); ?>
+	<textarea name="post"></textarea><br />
 	<button id="submit">Post</button>
+	<?php form_close(); ?>
 </div>
