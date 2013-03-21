@@ -68,7 +68,7 @@ class Twitter extends CI_Controller
 			{
 				// An error occured. Make sure to put your error notification code here.
 				//redirect(base_url('/auth_error'));
-				print_r($this->connection->http_code);
+				print_r($this->connection);
 			}
 		}
 	}
