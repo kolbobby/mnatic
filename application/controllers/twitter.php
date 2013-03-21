@@ -37,6 +37,7 @@
 			else
 			{
 				// Already logged in via Twitter
+				redirect('/twitter/');
 			}
 		}
 		
