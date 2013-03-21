@@ -19,8 +19,6 @@ class Twitter extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		// Loading twitteroauth library. Delete this line if you choose autoload method.
-		$this->load->library('twitteroauth');
 		// Loading twitter configuration.
 		$this->config->load('twitter');
 		
