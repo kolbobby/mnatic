@@ -15,7 +15,7 @@ class Twitter extends CI_Controller {
 		$this->load->library('TwitterOAuth');
 		
 		// CREATE NEW TWEET INSTANCE
-		$this->connection = $this->TwitterOAuth->create($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
+		$this->connection = $this->TwitterOAuth->create($consumer_key, $consumer_secret, $access_key, $access_secret);
 	}
 
 	public function post() {
