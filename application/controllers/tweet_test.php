@@ -20,7 +20,7 @@
 			// $this->tweet->set_tokens($tokens);
 			
 			
-			if ( $this->tweet->logged_in() )
+			if ( !$this->tweet->logged_in() )
 			{
 				// This is where the url will go to after auth.
 				// ( Callback url )
