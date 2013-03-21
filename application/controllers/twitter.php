@@ -110,7 +110,7 @@ class Twitter extends CI_Controller
 		}
 	}
 	
-	public function post()
+	public function post($in_reply_to)
 	{
 		$message = $_POST['content'];
 		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
