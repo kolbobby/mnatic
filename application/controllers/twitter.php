@@ -12,13 +12,15 @@ class Twitter extends CI_Controller
 	 * twitteroauth class instance.
 	 */
 	private $connection = null;
+	private $checking = false;
 	
 	/**
 	 * Controller constructor
 	 */
-	public function Twitter()
+	function __construct()
 	{
 		parent::__construct();
+		$checking = true;
 		// Loading twitter configuration.
 		$this->config->load('twitter');
 		
@@ -71,7 +73,8 @@ class Twitter extends CI_Controller
 					redirect(base_url('/auth_error'));
 				}
 			} else {
-				redirect(base_url('/connection_error'));
+				if(!$checking)
+					redirect(base_url('/connection_error'));
 			}
 		}
 	}
