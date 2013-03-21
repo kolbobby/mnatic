@@ -73,7 +73,7 @@ class Twitter extends CI_Controller
 					redirect(base_url('/auth_error'));
 				}
 			} else {
-				if(!$this->$checking)
+				if(!$this->checking)
 					redirect(base_url('/connection_error'));
 			}
 		}
