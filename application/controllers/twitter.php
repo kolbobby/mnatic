@@ -110,10 +110,10 @@ class Twitter extends CI_Controller
 		}
 	}
 	
-	public function post($in_reply_to)
+	public function post()
 	{
-		$message = $this->input->post('message');
-		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
+		$message = $_POST['content'];
+		if(!$message || strlen($message) > 140 || strlen($message) < 1)
 		{
 			// Restrictions error. Notification here.
 			redirect(base_url('/'));
@@ -140,12 +140,14 @@ class Twitter extends CI_Controller
 					if(!isset($result->error))
 					{
 						// Everything is OK
-						redirect(base_url('/'));
+						//redirect(base_url('/'));
+						echo "GOOD!";
 					}
 					else
 					{
 						// Error, message hasn't been published
-						redirect(base_url('/'));
+						//redirect(base_url('/'));
+						echo "BAD!";
 					}
 				}
 			}
