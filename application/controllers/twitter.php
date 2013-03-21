@@ -6,9 +6,6 @@
 		{
 			parent::__construct();
 			
-			// It really is best to auto-load this library!
-			$this->load->library('tweet');
-			
 			// Enabling debug will show you any errors in the calls you're making, e.g:
 			$this->tweet->enable_debug(TRUE);
 			
