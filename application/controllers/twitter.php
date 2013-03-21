@@ -9,7 +9,7 @@
 class Twitter extends CI_Controller
 {
 	/**
-	 * TwitterOAuth class instance.
+	 * twitteroauth class instance.
 	 */
 	private $connection;
 	
@@ -19,25 +19,25 @@ class Twitter extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		// Loading TwitterOAuth library. Delete this line if you choose autoload method.
-		$this->load->library('TwitterOAuth');
+		// Loading twitteroauth library. Delete this line if you choose autoload method.
+		$this->load->library('twitteroauth');
 		// Loading twitter configuration.
 		$this->config->load('twitter');
 		
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{
 			// If user already logged in
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('access_token'),  $this->session->userdata('access_token_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('access_token'),  $this->session->userdata('access_token_secret'));
 		}
 		elseif($this->session->userdata('request_token') && $this->session->userdata('request_token_secret'))
 		{
 			// If user in process of authentication
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('request_token'), $this->session->userdata('request_token_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'), $this->session->userdata('request_token'), $this->session->userdata('request_token_secret'));
 		}
 		else
 		{
 			// Unknown user
-			$this->connection = $this->TwitterOAuth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'));
+			$this->connection = $this->twitteroauth->create($this->config->item('twitter_consumer_token'), $this->config->item('twitter_consumer_secret'));
 		}
 	}
 	
