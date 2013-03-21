@@ -13,6 +13,6 @@ class Twitter extends CI_Controller {
 	}
 	
 	public function post() {
-		echo $this->connection;
+		echo $this->connection->http_code;
 	}
 }
