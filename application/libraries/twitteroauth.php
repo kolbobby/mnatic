@@ -64,6 +64,7 @@ class TwitterOAuth {
     } else {
       $this->token = NULL;
     }
+	return $this;
   }
 
 
