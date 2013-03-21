@@ -11,8 +11,7 @@ class Twitter extends CI_Controller
 	/**
 	 * twitteroauth class instance.
 	 */
-	private $connection = null;
-	private $checking = false;
+	private $connection;
 	
 	/**
 	 * Controller constructor
@@ -20,7 +19,6 @@ class Twitter extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		$this->$checking = true;
 		// Loading twitter configuration.
 		$this->config->load('twitter');
 		
@@ -61,20 +59,16 @@ class Twitter extends CI_Controller
 			$this->session->set_userdata('request_token', $request_token['oauth_token']);
 			$this->session->set_userdata('request_token_secret', $request_token['oauth_token_secret']);
 			
-			if($connection) {
-				if($this->connection->http_code == 200 || $this->connection->http_code == 302)
-				{
-					$url = $this->connection->getAuthorizeURL($request_token);
-					redirect($url);
-				}
-				else
-				{
-					// An error occured. Make sure to put your error notification code here.
-					redirect(base_url('/auth_error'));
-				}
-			} else {
-				if(!$this->checking)
-					redirect(base_url('/connection_error'));
+			if($this->connection->http_code == 200 || $this->connection->http_code == 302)
+			{
+				$url = $this->connection->getAuthorizeURL($request_token);
+				redirect($url);
+			}
+			else
+			{
+				// An error occured. Make sure to put your error notification code here.
+				//redirect(base_url('/auth_error'));
+				print_r($this->connection->http_code);
 			}
 		}
 	}
