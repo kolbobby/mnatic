@@ -135,7 +135,7 @@ class Twitter extends CI_Controller
 					if(!isset($result->error))
 					{
 						// Everything is OK
-						redirect(base_url('/'));
+						redirect(base_url('/posted'));
 					}
 					else
 					{
