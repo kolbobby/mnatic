@@ -49,7 +49,7 @@ class Twitter extends CI_Controller
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{
 			// User is already authenticated. Add your user notification code here.
-			redirect(base_url('/'));
+			redirect(base_url('/auth'));
 		}
 		else
 		{
@@ -67,7 +67,7 @@ class Twitter extends CI_Controller
 			else
 			{
 				// An error occured. Make sure to put your error notification code here.
-				redirect(base_url('/'));
+				redirect(base_url('/auth_error'));
 			}
 		}
 	}
@@ -103,7 +103,7 @@ class Twitter extends CI_Controller
 			else
 			{
 				// An error occured. Add your notification code here.
-				redirect(base_url('/'));
+				redirect(base_url('/callback_error'));
 			}
 		}
 	}
@@ -114,7 +114,7 @@ class Twitter extends CI_Controller
 		if(!$message || mb_strlen($message) > 140 || mb_strlen($message) < 1)
 		{
 			// Restrictions error. Notification here.
-			redirect(base_url('/'));
+			redirect(base_url('/msg_error'));
 		}
 		else
 		{
