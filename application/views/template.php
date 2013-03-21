@@ -8,7 +8,7 @@
 			$(document).ready(function() {
 				$('#submit').click(function() {
 					$.post('/post', { content: $('#post').val() }, function(r) {
-						location.reload();
+						alert(r);
 					});
 				});
 			})
