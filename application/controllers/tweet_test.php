@@ -57,10 +57,10 @@
 			$user = $this->tweet->call('get', 'account/verify_credentials');
 			var_dump($user);
 			
+			/*
 			$friendship 	= $this->tweet->call('get', 'friendships/show', array('source_screen_name' => $user->screen_name, 'target_screen_name' => 'elliothaughin'));
 			var_dump($friendship);
 			
-			/*
 			if ( $friendship->relationship->target->following === FALSE )
 			{
 				$this->tweet->call('post', 'friendships/create', array('screen_name' => $user->screen_name, 'follow' => TRUE));
