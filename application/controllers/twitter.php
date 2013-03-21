@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Twitter extends CI_Controller {
+	private $connection;
 	public function Twitter() {
 		parent::__construct();
 		
@@ -14,13 +15,16 @@ class Twitter extends CI_Controller {
 		$this->load->library('TwitterOAuth');
 		
 		// CREATE NEW TWEET INSTANCE
-		$this->$tweet = new TwitterOAuth($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
+		$this->connection = $this->TwitterOAuth->create($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
 	}
 
 	public function post() {
-		//$post = $_POST['content'];
-		//$this->$tweet->post('statuses/update', array('status' => "$post"));
+		$post = array('status' => $_POST['content']);
+		$result = $this->connection->post('statuses/update', $post);
 		
-		echo "Post successful!";
+		if(!isset($result->error))
+			echo "Post successful!";
+		else
+			echo "Post failed!";
 	}
 }
