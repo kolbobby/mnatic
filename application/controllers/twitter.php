@@ -13,7 +13,6 @@ class Twitter extends CI_Controller {
 	}
 	
 	public function post() {
-		$post = array('status' => $_POST['content']);
-		$result = $this->connection->post('statuses/update', $post);
+		echo $this->connection;
 	}
 }
