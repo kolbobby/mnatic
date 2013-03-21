@@ -32,7 +32,8 @@
 			else
 			{
 				// Already logged in via Twitter
-				redirect('/');
+				$tokens = $this->tweet->get_tokens();
+				var_dumb($tokens);
 			}
 		}
 		
