@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Twitter extends CI_Controller {
-	private $consumerKey = 'waCJgHUYryh7MKx1duFEqA';
+	/*private $consumerKey = 'waCJgHUYryh7MKx1duFEqA';
 	private $consumerSecret = 'wZ7ZyCtxkG41S7rqLrBqmYfj6vFuLnSslAQlt91bovM';
 	private $OAuthToken = '726047942-1xIWuuR4i57yTvYsihOzzCEvL1VmHZVBj27GRekr';
 	private $OAuthSecret = '3kqCWrdRkma8BbsVu0MfKTaxMJimUbah78udPOY57g';
@@ -11,7 +11,7 @@ class Twitter extends CI_Controller {
 		parent::__construct();
 		
 		$this->connection = $this->twitteroauth->create($this->$consumerKey, $this->$consumerSecret, $this->$OAuthToken, $this->$OAuthSecret);
-	}
+	}*/
 	
 	public function post() {
 		echo $_POST['content'];
