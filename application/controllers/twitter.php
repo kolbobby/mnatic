@@ -20,5 +20,7 @@ class Twitter extends CI_Controller {
 	public function post() {
 		$post = $_POST['content'];
 		$this->$tweet->post('statuses/update', array('status' => "$post"));
+		
+		echo "Post successful!";
 	}
 }
