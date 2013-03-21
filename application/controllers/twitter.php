@@ -19,6 +19,7 @@
 		
 		function login()
 		{
+			$this->tweet->set_tokens(array());
 			if ( !$this->tweet->logged_in() )
 			{
 				$this->tweet->set_callback(site_url('tweet_test/auth'));

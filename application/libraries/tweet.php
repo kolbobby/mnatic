@@ -423,9 +423,6 @@ class tweetOauth extends tweetConnection {
 	public function getTokens() {
 		return $this -> _tokens;
 	}
-	public function clearTokens() {
-		return $this -> _tokens = array();
-	}
 
 	private function _getConsumerKey() {
 		return $this -> _tokens['consumer_key'];
