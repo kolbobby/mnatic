@@ -21,7 +21,7 @@
 		{
 			if ( !$this->tweet->logged_in() )
 			{
-				$this->tweet->set_callback(site_url('tweet_test/auth'));
+				$this->tweet->set_callback(site_url('twitter/auth'));
 				
 				// Send the user off for login!
 				$this->tweet->login();
@@ -29,7 +29,7 @@
 			else
 			{
 				// Already logged in via Twitter
-				redirect('/');
+				redirect('/twitter/auth');
 			}
 		}
 		
@@ -42,7 +42,7 @@
 			// Will throw an error with a stacktrace.
 			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
-			var_dump($user);
+			var_dumb($user);
 			
 			/*
 			$friendship 	= $this->tweet->call('get', 'friendships/show', array('source_screen_name' => $user->screen_name, 'target_screen_name' => 'elliothaughin'));
