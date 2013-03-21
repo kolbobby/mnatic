@@ -16,7 +16,7 @@ class Twitter extends CI_Controller
 	/**
 	 * Controller constructor
 	 */
-	function __construct()
+	public function Twitter()
 	{
 		parent::__construct();
 		// Loading twitter configuration.
