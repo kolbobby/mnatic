@@ -202,7 +202,7 @@
 						
 						if ( $response->__resp->code !== 200 )
 						{
-							throw new twitterException($response->__resp->code.' | Request Failed: '.$response->__resp->data->request.' - '.$response->__resp->data->error);
+							throw new tweetException($response->__resp->code.' | Request Failed: '.$response->__resp->data->request.' - '.$response->__resp->data->error);
 						}
 						
 						return $response;
