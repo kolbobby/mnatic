@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['post'] = "twitter/post";
 $route['twitter/auth'] = "twitter/auth";
+$route['twitter/callback'] = "twitter/callback";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

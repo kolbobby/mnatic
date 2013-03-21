@@ -59,7 +59,9 @@ class Twitter extends CI_Controller
 			$this->session->set_userdata('request_token', $request_token['oauth_token']);
 			$this->session->set_userdata('request_token_secret', $request_token['oauth_token_secret']);
 			
-			if($this->connection->http_code == 200 || $this->connection->http_code == 302)
+			$url = $this->connection->getAuthorizeURL($request_token);
+			redirect($url);
+			/*if($this->connection->http_code == 200 || $this->connection->http_code == 302)
 			{
 				$url = $this->connection->getAuthorizeURL($request_token);
 				redirect($url);
@@ -68,7 +70,7 @@ class Twitter extends CI_Controller
 			{
 				// An error occured. Make sure to put your error notification code here.
 				redirect(base_url('/auth_error'));
-			}
+			}*/
 		}
 	}
 	
