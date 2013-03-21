@@ -10,7 +10,7 @@ class Twitter extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		
-		$this->connection = $this->twitteroauch->create($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
+		$this->connection = $this->twitteroauth->create($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
 	}
 	
 	public function post() {
