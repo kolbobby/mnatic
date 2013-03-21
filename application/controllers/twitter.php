@@ -19,7 +19,7 @@
 		
 		function login()
 		{
-			$this->tweet->set_tokens(array('oauth_token' => '726047942-8qrGvAQZjaELTf93zUMZrVrCJxa11NVyxQdGmjkH', 'oauth_token_secret' => 'hiRZbMoh1cvn50VcdSDdekwyPuXwz596v5tk0Eo0ew'));
+			//$this->tweet->set_tokens(array('oauth_token' => '726047942-8qrGvAQZjaELTf93zUMZrVrCJxa11NVyxQdGmjkH', 'oauth_token_secret' => 'hiRZbMoh1cvn50VcdSDdekwyPuXwz596v5tk0Eo0ew'));
 			if ( !$this->tweet->logged_in() )
 			{
 				$this->tweet->set_callback(site_url('tweet_test/auth'));
@@ -31,8 +31,8 @@
 			{
 				// Already logged in via Twitter
 				//redirect('/');
-				//$timeline = $this->tweet->call('get', 'statuses/home_timeline');
-				//var_dump($timeline);
+				$timeline = $this->tweet->call('get', 'statuses/home_timeline');
+				var_dump($timeline);
 				print_r($this->tweet->get_tokens());
 			}
 		}
