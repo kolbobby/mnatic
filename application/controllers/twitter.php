@@ -20,11 +20,6 @@
 			// $this->tweet->set_tokens($tokens);
 		}
 		
-		function index()
-		{
-			echo 'hi there';
-		}
-		
 		function login()
 		{
 			if ( !$this->tweet->logged_in() )
@@ -37,7 +32,7 @@
 			else
 			{
 				// Already logged in via Twitter
-				redirect('/twitter/');
+				redirect('/');
 			}
 		}
 		

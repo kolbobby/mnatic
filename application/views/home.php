@@ -1,4 +1,1 @@
-<div>
-	<textarea id="post"></textarea><br />
-	<button id="submit">Post</button>
-</div>
+<h1>Welcome to mNatic!</h1>
