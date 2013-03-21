@@ -7,6 +7,7 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#submit').click(function() {
+					alert('asdf');
 					$.post('/post', { content: $('#post').val() }, function(r) {
 						alert(r);
 					});
