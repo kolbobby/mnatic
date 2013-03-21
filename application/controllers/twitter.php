@@ -16,11 +16,9 @@ class Twitter extends CI_Controller
 	/**
 	 * Controller constructor
 	 */
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
-		// Loading TwitterOauth library. Delete this line if you choose autoload method.
-		$this->load->library('twitteroauth');
 		// Loading twitter configuration.
 		$this->config->load('twitter');
 		
@@ -51,7 +49,7 @@ class Twitter extends CI_Controller
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{
 			// User is already authenticated. Add your user notification code here.
-			redirect(base_url('/'));
+			echo "Already authed";
 		}
 		else
 		{
@@ -69,7 +67,7 @@ class Twitter extends CI_Controller
 			else
 			{
 				// An error occured. Make sure to put your error notification code here.
-				redirect(base_url('/'));
+				echo "Auth error";
 			}
 		}
 	}
@@ -100,12 +98,12 @@ class Twitter extends CI_Controller
 				$this->session->unset_userdata('request_token');
 				$this->session->unset_userdata('request_token_secret');
 				
-				redirect(base_url('/'));
+				echo "Callback";
 			}
 			else
 			{
 				// An error occured. Add your notification code here.
-				redirect(base_url('/'));
+				echo "Callback error";
 			}
 		}
 	}
@@ -116,7 +114,7 @@ class Twitter extends CI_Controller
 		if(!$message || strlen($message) > 140 || strlen($message) < 1)
 		{
 			// Restrictions error. Notification here.
-			redirect(base_url('/'));
+			echo "Message error!";
 		}
 		else
 		{
@@ -131,10 +129,7 @@ class Twitter extends CI_Controller
 				}
 				else
 				{
-					$data = array(
-						'status' => $message,
-						'in_reply_to_status_id' => $in_reply_to
-					);
+					$data = array('status' => $message);
 					$result = $this->connection->post('statuses/update', $data);
 
 					if(!isset($result->error))
