@@ -14,6 +14,6 @@ class Twitter extends CI_Controller {
 	}
 	
 	public function post() {
-		echo $_POST['connect'];
+		echo $this->connection;
 	}
 }
