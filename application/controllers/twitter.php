@@ -88,7 +88,7 @@ class Twitter extends CI_Controller
 		{
 			$access_token = $this->connection->getAccessToken($this->input->get('oauth_verifier'));
 		
-			if ($this->connection->http_code == 200)
+			if ($this->connection->http_code == 200 || $this->connection->http_code == 302)
 			{
 				$this->session->set_userdata('access_token', $access_token['oauth_token']);
 				$this->session->set_userdata('access_token_secret', $access_token['oauth_token_secret']);
