@@ -29,10 +29,9 @@
 			else
 			{
 				// Already logged in via Twitter
-				$tokens = $this->tweet->get_tokens();
-				var_dumb($tokens);
-				print_r($tokens);
-				//redirect('/twitter/auth');
+				//redirect('/');
+				$timeline = $this->tweet->call('get', 'statuses/home_timeline');
+				var_dump($timeline);
 			}
 		}
 		
