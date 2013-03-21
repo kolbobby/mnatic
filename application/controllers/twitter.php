@@ -15,10 +15,5 @@ class Twitter extends CI_Controller {
 	public function post() {
 		$post = array('status' => $_POST['content']);
 		$result = $connection->post('statuses/update', $post);
-		
-		if(!$result->error)
-			echo "Post successful!";
-		else
-			echo "Post failed!";
 	}
 }
