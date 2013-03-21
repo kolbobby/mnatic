@@ -42,7 +42,9 @@
 			// Will throw an error with a stacktrace.
 			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
-			var_dump($user);
+			print_r("Username: " . $user->screen_name);
+			echo "<br />";
+			print_r("Name: " . $user->name);
 			
 			/*
 			$friendship 	= $this->tweet->call('get', 'friendships/show', array('source_screen_name' => $user->screen_name, 'target_screen_name' => 'elliothaughin'));
