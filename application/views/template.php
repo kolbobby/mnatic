@@ -8,6 +8,11 @@
 		<link rel="StyleSheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
 		<script src="<?= base_url(); ?>assets/js/bootstrap.js"></script>
 		
+		<style type="text/css">
+			img {
+				width:100%;
+			}
+		</style>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('.carousel').carousel({
@@ -46,8 +51,8 @@
 				</div>
 			</div>
 			
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			<a class="carousel-control left" href="#main-carousel" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#main-carousel" data-slide="next">&rsaquo;</a>
 		</div>
 	
 		<div><?php $this->load->view($content); ?></div>
