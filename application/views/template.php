@@ -35,7 +35,7 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<a class="brand" href="/">mNatic</a>
-				<ul class="nav">
+				<ul class="nav pull-right">
 					<li class="active"><a href="/">Home</a></li>
 					<li><a href="#">Sign In</a></li>
 				</ul>
