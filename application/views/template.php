@@ -15,7 +15,10 @@
 			}
 			
 			.navbar {
+				width:90%;
+				top:15px;
 				position:absolute;
+				margin:0 5% 0 5%;
 			}
 		</style>
 		<script type="text/javascript">
