@@ -13,6 +13,10 @@
 				width:100%;
 				height:300px;
 			}
+			
+			.navbar {
+				position:absolute;
+			}
 		</style>
 		<script type="text/javascript">
 			$(document).ready(function() {
