@@ -24,32 +24,16 @@
 	</head>
 	
 	<body>
-		<div id="main-carousel" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="http://placehold.it/1200x480" alt="" />
-					<div class="carousel-caption">
-						<p>Just a sample caption 1!</p>
-					</div>
-				</div>
-				<div class="item">
-					<img src="http://placehold.it/1200x480" alt="" />
-					<div class="carousel-caption">
-						<p>Just a sample caption 2!</p>
-					</div>
-				</div>
-				<div class="item">
-					<img src="http://placehold.it/1200x480" alt="" />
-					<div class="carousel-caption">
-						<p>Just a sample caption 3!</p>
-					</div>
-				</div>
+		<?php include_once('includes/carousel.html'); ?>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/">mNatic</a>
+				<ul class="nav">
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="#">Sign In</a></li>
+				</ul>
 			</div>
-			
-			<a class="carousel-control left" href="#main-carousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#main-carousel" data-slide="next">&rsaquo;</a>
 		</div>
-	
 		<div><?php $this->load->view($content); ?></div>
 	</body>
 </html>
