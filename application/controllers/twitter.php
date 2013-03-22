@@ -19,17 +19,18 @@
 		
 		function login()
 		{
+			print_r($this->tweet->get_tokens());
 			if ( !$this->tweet->logged_in() )
 			{
-				$this->tweet->set_callback(site_url('twitter/auth'));
+				//$this->tweet->set_callback(site_url('twitter/auth'));
 				
 				// Send the user off for login!
-				$this->tweet->login();
+				//$this->tweet->login();
 			}
 			else
 			{
 				// Already logged in via Twitter
-				redirect('/twitter/auth');
+				//redirect('/twitter/auth');
 			}
 		}
 		
