@@ -11,6 +11,7 @@
 		<style type="text/css">
 			img {
 				width:100%;
+				height:400px;
 			}
 		</style>
 		<script type="text/javascript">
