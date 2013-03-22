@@ -19,18 +19,10 @@
 		
 		function login()
 		{
-			if ( !$this->tweet->logged_in() )
-			{
-				$this->tweet->set_callback(site_url('twitter/auth'));
-				
-				// Send the user off for login!
-				$this->tweet->login();
-			}
-			else
-			{
-				// Already logged in via Twitter
-				redirect('/twitter/auth');
-			}
+			$this->tweet->set_callback(site_url('twitter/auth'));
+			
+			// Send the user off for login!
+			$this->tweet->login();
 		}
 		
 		function auth()
