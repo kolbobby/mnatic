@@ -1,3 +1,4 @@
+<?= base_url(); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
