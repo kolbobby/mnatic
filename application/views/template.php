@@ -11,7 +11,7 @@
 		<style type="text/css">
 			img {
 				width:100%;
-				height:400px;
+				height:300px;
 			}
 		</style>
 		<script type="text/javascript">
@@ -25,12 +25,6 @@
 	
 	<body>
 		<div id="main-carousel" class="carousel slide">
-			<ol class="carousel-indicators">
-				<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#main-carousel" data-slide-to="1"></li>
-				<li data-target="#main-carousel" data-slide-to="2"></li>
-			</ol>
-			
 			<div class="carousel-inner">
 				<div class="item active">
 					<img src="http://placehold.it/1200x480" alt="" />
