@@ -35,7 +35,7 @@
 	
 	<body>
 		<?php include_once('includes/carousel.html'); ?>
-		<div class="navbar inverse center-margin">
+		<div class="navbar navbar-inverse center-margin">
 			<div class="navbar-inner">
 				<a class="brand" href="/">mNatic</a>
 				<ul class="nav pull-right">
