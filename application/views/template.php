@@ -1,4 +1,3 @@
-<?= base_url(); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,15 +5,15 @@
 		<title><?= $title; ?></title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		
-		<link href="<?= base_url(); ?>assets/css/bootstrap.css" />
-		<script src="<?= base_url(); ?>assets/js/bootstrap.js"></script>
+		<link href="<?= base_url() ?>assets/css/bootstrap.css" />
+		<script src="<?= base_url() ?>assets/js/bootstrap.js"></script>
 		
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('.carousel').carousel({
 					interval: 5000
 				});
-			});
+			})
 		</script>
 	</head>
 	
