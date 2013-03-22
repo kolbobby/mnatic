@@ -44,6 +44,6 @@
 				</ul>
 			</div>
 		</div>
-		<div><?php $this->load->view($content); ?></div>
+		<div class="center-margin"><?php $this->load->view($content); ?></div>
 	</body>
 </html>
