@@ -15,9 +15,12 @@
 			}
 			
 			.navbar {
-				width:90%;
 				top:15px;
 				position:absolute;
+			}
+			
+			.center-margin {
+				width:90%;
 				margin:0 5% 0 5%;
 			}
 		</style>
@@ -32,7 +35,7 @@
 	
 	<body>
 		<?php include_once('includes/carousel.html'); ?>
-		<div class="navbar">
+		<div class="navbar center-margin">
 			<div class="navbar-inner">
 				<a class="brand" href="/">mNatic</a>
 				<ul class="nav pull-right">
