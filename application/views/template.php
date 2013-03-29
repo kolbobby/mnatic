@@ -12,6 +12,14 @@
 				width:100%;
 				height:300px;
 			}
+
+			.navbar-wrapper {
+				top:0;
+				left:0;
+				right:0;
+				margin-top:15px;
+				position:absolute;
+			}
 		</style>
 		<link rel="StyleSheet" href="<?= base_url(); ?>assets/css/bootstrap-responsive.css" />
 
