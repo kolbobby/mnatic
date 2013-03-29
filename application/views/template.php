@@ -8,10 +8,6 @@
 		
 		<link rel="StyleSheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
 		<style type="text/css">
-			body {
-				padding-top:40px;
-			}
-
 			img {
 				width:100%;
 				height:300px;
