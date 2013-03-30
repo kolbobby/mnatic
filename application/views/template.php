@@ -34,28 +34,12 @@
 	
 	<body>
 		<?php include_once('includes/carousel.html'); ?>
-		<div class="navbar-wrapper">
+		<?php include_once('includes/navigation.html') ?>
+
+		<div class="hero-unit">
 			<div class="container">
-				<div class="navbar navbar-inverse">
-					<div class="navbar-inner">
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-
-						<a class="brand" href="/">mNatic</a>
-
-						<div class="nav-collapse collapse">
-							<ul class="nav pull-right">
-								<li class="active"><a href="/">Home</a></li>
-								<li><a href="#">Sign In</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				<?php $this->load->view($content); ?>
 			</div>
 		</div>
-		<div class="container"><?php $this->load->view($content); ?></div>
 	</body>
 </html>
