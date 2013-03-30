@@ -24,6 +24,11 @@
 				margin-top:15px;
 				position:absolute;
 			}
+
+			.hero-unit {
+				padding-top:5px;
+				padding-bottom:10px;
+			}
 		</style>
 		<link rel="StyleSheet" href="<?= base_url(); ?>assets/css/bootstrap-responsive.css" />
 
