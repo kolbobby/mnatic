@@ -13,6 +13,10 @@
 				height:300px;
 			}
 
+			.carousel {
+				margin-bottom:0;
+			}
+
 			.navbar-wrapper {
 				top:0;
 				left:0;
